@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		791D81B91A3B7339007ABCD6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 791D81B81A3B7339007ABCD6 /* main.cpp */; };
+		791D81C11A3B7421007ABCD6 /* Service.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 791D81BF1A3B7421007ABCD6 /* Service.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		791D81B51A3B7339007ABCD6 /* b3socks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = b3socks; sourceTree = BUILT_PRODUCTS_DIR; };
 		791D81B81A3B7339007ABCD6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		791D81BF1A3B7421007ABCD6 /* Service.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Service.cpp; sourceTree = "<group>"; };
+		791D81C01A3B7421007ABCD6 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				791D81B81A3B7339007ABCD6 /* main.cpp */,
+				791D81BF1A3B7421007ABCD6 /* Service.cpp */,
+				791D81C01A3B7421007ABCD6 /* Service.h */,
 			);
 			path = b3socks;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				791D81B91A3B7339007ABCD6 /* main.cpp in Sources */,
+				791D81C11A3B7421007ABCD6 /* Service.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +208,7 @@
 		791D81BD1A3B7339007ABCD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +216,7 @@
 		791D81BE1A3B7339007ABCD6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

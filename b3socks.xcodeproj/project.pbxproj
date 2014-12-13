@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		791D81B91A3B7339007ABCD6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 791D81B81A3B7339007ABCD6 /* main.cpp */; };
 		791D81C11A3B7421007ABCD6 /* Service.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 791D81BF1A3B7421007ABCD6 /* Service.cpp */; };
+		79D243D61A3B851C005D75E9 /* CommandParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79D243D41A3B851C005D75E9 /* CommandParser.cpp */; };
+		79D244041A3C5382005D75E9 /* BlackADC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79D243F31A3C5382005D75E9 /* BlackADC.cpp */; };
+		79D244051A3C5382005D75E9 /* BlackCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79D243F51A3C5382005D75E9 /* BlackCore.cpp */; };
+		79D244061A3C5382005D75E9 /* BlackGPIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79D243F91A3C5382005D75E9 /* BlackGPIO.cpp */; };
+		79D244071A3C5382005D75E9 /* BlackI2C.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79D243FB1A3C5382005D75E9 /* BlackI2C.cpp */; };
+		79D244081A3C5382005D75E9 /* BlackPWM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79D243FE1A3C5382005D75E9 /* BlackPWM.cpp */; };
+		79D244091A3C5382005D75E9 /* BlackSPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79D244001A3C5382005D75E9 /* BlackSPI.cpp */; };
+		79D2440A1A3C5382005D75E9 /* BlackUART.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79D244021A3C5382005D75E9 /* BlackUART.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +36,25 @@
 		791D81B81A3B7339007ABCD6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		791D81BF1A3B7421007ABCD6 /* Service.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Service.cpp; sourceTree = "<group>"; };
 		791D81C01A3B7421007ABCD6 /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		79D243D41A3B851C005D75E9 /* CommandParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandParser.cpp; sourceTree = "<group>"; };
+		79D243D51A3B851C005D75E9 /* CommandParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandParser.h; sourceTree = "<group>"; };
+		79D243F31A3C5382005D75E9 /* BlackADC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlackADC.cpp; sourceTree = "<group>"; };
+		79D243F41A3C5382005D75E9 /* BlackADC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackADC.h; sourceTree = "<group>"; };
+		79D243F51A3C5382005D75E9 /* BlackCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlackCore.cpp; sourceTree = "<group>"; };
+		79D243F61A3C5382005D75E9 /* BlackCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackCore.h; sourceTree = "<group>"; };
+		79D243F71A3C5382005D75E9 /* BlackDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackDef.h; sourceTree = "<group>"; };
+		79D243F81A3C5382005D75E9 /* BlackErr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackErr.h; sourceTree = "<group>"; };
+		79D243F91A3C5382005D75E9 /* BlackGPIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlackGPIO.cpp; sourceTree = "<group>"; };
+		79D243FA1A3C5382005D75E9 /* BlackGPIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackGPIO.h; sourceTree = "<group>"; };
+		79D243FB1A3C5382005D75E9 /* BlackI2C.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlackI2C.cpp; sourceTree = "<group>"; };
+		79D243FC1A3C5382005D75E9 /* BlackI2C.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackI2C.h; sourceTree = "<group>"; };
+		79D243FD1A3C5382005D75E9 /* BlackLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackLib.h; sourceTree = "<group>"; };
+		79D243FE1A3C5382005D75E9 /* BlackPWM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlackPWM.cpp; sourceTree = "<group>"; };
+		79D243FF1A3C5382005D75E9 /* BlackPWM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackPWM.h; sourceTree = "<group>"; };
+		79D244001A3C5382005D75E9 /* BlackSPI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlackSPI.cpp; sourceTree = "<group>"; };
+		79D244011A3C5382005D75E9 /* BlackSPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackSPI.h; sourceTree = "<group>"; };
+		79D244021A3C5382005D75E9 /* BlackUART.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlackUART.cpp; sourceTree = "<group>"; };
+		79D244031A3C5382005D75E9 /* BlackUART.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackUART.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +71,7 @@
 		791D81AC1A3B7339007ABCD6 = {
 			isa = PBXGroup;
 			children = (
+				79D243F21A3C5382005D75E9 /* blacklib */,
 				791D81B71A3B7339007ABCD6 /* b3socks */,
 				791D81B61A3B7339007ABCD6 /* Products */,
 			);
@@ -63,8 +91,34 @@
 				791D81B81A3B7339007ABCD6 /* main.cpp */,
 				791D81BF1A3B7421007ABCD6 /* Service.cpp */,
 				791D81C01A3B7421007ABCD6 /* Service.h */,
+				79D243D41A3B851C005D75E9 /* CommandParser.cpp */,
+				79D243D51A3B851C005D75E9 /* CommandParser.h */,
 			);
 			path = b3socks;
+			sourceTree = "<group>";
+		};
+		79D243F21A3C5382005D75E9 /* blacklib */ = {
+			isa = PBXGroup;
+			children = (
+				79D243F31A3C5382005D75E9 /* BlackADC.cpp */,
+				79D243F41A3C5382005D75E9 /* BlackADC.h */,
+				79D243F51A3C5382005D75E9 /* BlackCore.cpp */,
+				79D243F61A3C5382005D75E9 /* BlackCore.h */,
+				79D243F71A3C5382005D75E9 /* BlackDef.h */,
+				79D243F81A3C5382005D75E9 /* BlackErr.h */,
+				79D243F91A3C5382005D75E9 /* BlackGPIO.cpp */,
+				79D243FA1A3C5382005D75E9 /* BlackGPIO.h */,
+				79D243FB1A3C5382005D75E9 /* BlackI2C.cpp */,
+				79D243FC1A3C5382005D75E9 /* BlackI2C.h */,
+				79D243FD1A3C5382005D75E9 /* BlackLib.h */,
+				79D243FE1A3C5382005D75E9 /* BlackPWM.cpp */,
+				79D243FF1A3C5382005D75E9 /* BlackPWM.h */,
+				79D244001A3C5382005D75E9 /* BlackSPI.cpp */,
+				79D244011A3C5382005D75E9 /* BlackSPI.h */,
+				79D244021A3C5382005D75E9 /* BlackUART.cpp */,
+				79D244031A3C5382005D75E9 /* BlackUART.h */,
+			);
+			path = blacklib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +177,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D244061A3C5382005D75E9 /* BlackGPIO.cpp in Sources */,
+				79D244071A3C5382005D75E9 /* BlackI2C.cpp in Sources */,
 				791D81B91A3B7339007ABCD6 /* main.cpp in Sources */,
+				79D244091A3C5382005D75E9 /* BlackSPI.cpp in Sources */,
+				79D243D61A3B851C005D75E9 /* CommandParser.cpp in Sources */,
+				79D244041A3C5382005D75E9 /* BlackADC.cpp in Sources */,
 				791D81C11A3B7421007ABCD6 /* Service.cpp in Sources */,
+				79D244081A3C5382005D75E9 /* BlackPWM.cpp in Sources */,
+				79D244051A3C5382005D75E9 /* BlackCore.cpp in Sources */,
+				79D2440A1A3C5382005D75E9 /* BlackUART.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +302,7 @@
 				791D81BE1A3B7339007ABCD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

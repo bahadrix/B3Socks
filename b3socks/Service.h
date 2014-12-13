@@ -24,6 +24,7 @@
 #define SERVER_ERR_BINDING_ERROR 102
 #define SERVER_ERR_ACCEPT 103
 #define SERVER_ERR_READ 104
+#define SERVER_ERR_WRITE 105
 
 #define SERVER_LISTENING_START 201
 #define SERVER_CLIENT_CONNECTED 202
@@ -31,16 +32,13 @@
 
 
 namespace B3Socks {
-
-
-    
-    
+ 
     class ServiceListener {
     public:
         virtual void onAttach() {};
-        virtual void onListeningStart() {};
-        virtual void onMessageReceive(char *buffer, int size){};
+        virtual void onListeningStart(int *port) {};
         virtual void onClientConnect(char* ip){};
+        virtual bool onMessageReceive(char *msg, char** response) {return true;};
         virtual bool onError(int errorCode){return false;};
         
     };

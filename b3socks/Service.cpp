@@ -22,15 +22,10 @@ Service::Service(ServiceListener* listener, int port, int bufferSize) {
 
 void Service::start() {
     
-    
-    
     socklen_t clilen;
     char buffer[bufferSize];
     
     struct sockaddr_in serv_addr, cli_addr;
-    
-    
-    
     
     //Create socket
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -38,7 +33,6 @@ void Service::start() {
         listener->onError(SERVER_ERR_CANT_OPEN_PORT);
         return;
     }
-    
     
     bzero((char *) &serv_addr, sizeof(serv_addr));
     
@@ -55,7 +49,7 @@ void Service::start() {
     //Listen
     listen(sockfd,5);
     
-    listener->onListeningStart();
+    listener->onListeningStart(&port);
     
     clilen = sizeof(cli_addr);
     
@@ -64,7 +58,6 @@ void Service::start() {
                        (struct sockaddr *) &cli_addr,
                        &clilen);
     
-    
     if (newsockfd < 0) {
         if(!listener->onError(SERVER_ERR_ACCEPT)) {
             stop();
@@ -72,35 +65,45 @@ void Service::start() {
         }
     }
     
-    
     char *client_ip =  inet_ntoa(cli_addr.sin_addr);
     
     listener->onClientConnect(client_ip);
     
     //Wait for client to send data and then read it
+    
     int n; //bytes read
-    bzero(buffer,bufferSize);
+    char* response;
+    bool loop = true;
     
-    //while start
-    
-    n = read(newsockfd,buffer,bufferSize - 1);
-    
-    if (n < 0) {
-        if(!listener->onError(SERVER_ERR_READ)) {
-            stop();
-            return;
+    while(loop) {
+        bzero(buffer,bufferSize);
+        
+        //while start
+        
+        n = read(newsockfd,buffer,bufferSize - 1);
+        
+        if (n < 0) {
+            if(!listener->onError(SERVER_ERR_READ)) {
+                stop();
+                return;
+            }
+        }
+        
+        loop = listener->onMessageReceive(buffer, &response);
+        
+        //write back to client
+        if(response != nullptr) {
+            n = write(newsockfd,response,strlen(response));
+
+            if (n < 0) {
+                if(!listener->onError(SERVER_ERR_WRITE)) {
+                    stop();
+                    return;
+                }
+            }
         }
     }
     
-    listener->onMessageReceive(buffer, n);
-    
-    /* write back to client
-     n = write(newsockfd,"I got your message",18);
-     
-     if (n < 0) {
-     fprintf(stderr,"ERROR writing to socket");
-     }
-     */
     stop();
 }
 

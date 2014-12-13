@@ -66,7 +66,7 @@ public:
 
 void testGPIO() {
  
-    BlackLib::BlackGPIO led(BlackLib::GPIO_60, BlackLib::output, BlackLib::SecureMode);
+    BlackLib::BlackGPIO led(BlackLib::GPIO_68, BlackLib::output, BlackLib::SecureMode);
     
 
     led.setValue(BlackLib::low);
